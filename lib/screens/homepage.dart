@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:veggie/screens/bringalscreen.dart';
+import 'package:veggie/screens/cartscreen.dart';
+import 'package:veggie/screens/ladiesfingerscreen.dart';
 import 'package:veggie/screens/onionscreen.dart';
+import 'package:veggie/screens/potatoscreen.dart';
+import 'package:veggie/screens/tamatoscreen.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -21,7 +26,12 @@ class _HomePageState extends State<HomePage> {
         ),
         centerTitle: true,
         actions: [
-          IconButton(icon: Icon(Icons.shopping_cart), onPressed: () {})
+          IconButton(
+              icon: Icon(Icons.shopping_cart),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CartScreen()));
+              })
         ],
         elevation: 0.0,
       ),
@@ -112,63 +122,6 @@ class _HomePageState extends State<HomePage> {
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
-                                    // Row(
-                                    //   children: [
-                                    //     InkWell(
-                                    //       onTap: () {},
-                                    //       child: Container(
-                                    //           padding: EdgeInsets.all(5.0),
-                                    //           decoration: BoxDecoration(
-                                    //             borderRadius:
-                                    //                 BorderRadius.circular(30.0),
-                                    //             border: Border.all(width: 1.0),
-                                    //           ),
-                                    //           child: Text("250g")),
-                                    //     ),
-                                    //     SizedBox(
-                                    //       width: 10.0,
-                                    //     ),
-                                    //     InkWell(
-                                    //       onTap: () {},
-                                    //       child: Container(
-                                    //           padding: EdgeInsets.all(5.0),
-                                    //           decoration: BoxDecoration(
-                                    //             borderRadius:
-                                    //                 BorderRadius.circular(30.0),
-                                    //             border: Border.all(width: 1.0),
-                                    //           ),
-                                    //           child: Text("500g")),
-                                    //     ),
-                                    //     SizedBox(
-                                    //       width: 10.0,
-                                    //     ),
-                                    //     InkWell(
-                                    //       onTap: () {},
-                                    //       child: Container(
-                                    //           padding: EdgeInsets.all(5.0),
-                                    //           decoration: BoxDecoration(
-                                    //             borderRadius:
-                                    //                 BorderRadius.circular(30.0),
-                                    //             border: Border.all(width: 1.0),
-                                    //           ),
-                                    //           child: Text("750g")),
-                                    //     ),
-                                    //     SizedBox(
-                                    //       width: 10.0,
-                                    //     ),
-                                    //     InkWell(
-                                    //       onTap: () {},
-                                    //       child: Container(
-                                    //           padding: EdgeInsets.all(5.0),
-                                    //           decoration: BoxDecoration(
-                                    //             borderRadius:
-                                    //                 BorderRadius.circular(30.0),
-                                    //             border: Border.all(width: 1.0),
-                                    //           ),
-                                    //           child: Text("1kg")),
-                                    //     ),
-                                    //   ],
-                                    // ),
                                   ],
                                 ),
                               ),
@@ -200,499 +153,320 @@ class _HomePageState extends State<HomePage> {
                       height: 20.0,
                     ),
                     // potato
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30.0),
-                          border: Border.all(width: 1.0, color: Colors.grey)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          // AssetImage("potato.jpg")
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(30.0),
-                            child: Image(
-                                fit: BoxFit.cover,
-                                height: 150.0,
-                                width: 150.0,
-                                image: AssetImage("assets/potato.jpg")),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Container(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Potato",
-                                  style: TextStyle(
-                                    fontSize: 20.0,
-                                    fontFamily: 'GrenzeGotisch',
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  "Price £ : 150 ",
-                                  style: TextStyle(
-                                    fontSize: 20.0,
-                                    fontFamily: 'GrenzeGotisch',
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                // Row(
-                                //   children: [
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("250g")),
-                                //     ),
-                                //     SizedBox(
-                                //       width: 10.0,
-                                //     ),
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("500g")),
-                                //     ),
-                                //     SizedBox(
-                                //       width: 10.0,
-                                //     ),
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("750g")),
-                                //     ),
-                                //     SizedBox(
-                                //       width: 10.0,
-                                //     ),
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("1kg")),
-                                //     ),
-                                //   ],
-                                // ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(right: 20.0),
-                            width: 48.0,
-                            decoration: BoxDecoration(
-                                color: Colors.lightGreenAccent,
-                                borderRadius: BorderRadius.circular(30.0)),
-                            child: IconButton(
-                              iconSize: 30.0,
-                              icon: Icon(
-                                Icons.add,
-
-                                // size: 50.0,
+                    Hero(
+                      tag: "assets/potato.jpg",
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => PotatoScreen()));
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30.0),
+                              border:
+                                  Border.all(width: 1.0, color: Colors.grey)),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              // AssetImage("potato.jpg")
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(30.0),
+                                child: Image(
+                                    fit: BoxFit.cover,
+                                    height: 150.0,
+                                    width: 150.0,
+                                    image: AssetImage("assets/potato.jpg")),
                               ),
-                              onPressed: () {},
-                            ),
+                              SizedBox(
+                                width: 10.0,
+                              ),
+                              Container(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Potato",
+                                      style: TextStyle(
+                                        fontSize: 20.0,
+                                        fontFamily: 'GrenzeGotisch',
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      "Price £ : 150 ",
+                                      style: TextStyle(
+                                        fontSize: 20.0,
+                                        fontFamily: 'GrenzeGotisch',
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10.0,
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(right: 20.0),
+                                width: 48.0,
+                                decoration: BoxDecoration(
+                                    color: Colors.lightGreenAccent,
+                                    borderRadius: BorderRadius.circular(30.0)),
+                                child: IconButton(
+                                  iconSize: 30.0,
+                                  icon: Icon(
+                                    Icons.add,
+
+                                    // size: 50.0,
+                                  ),
+                                  onPressed: () {},
+                                ),
+                              ),
+                            ],
                           ),
-                        ],
+                        ),
                       ),
                     ),
                     SizedBox(
                       height: 20.0,
                     ),
                     // tamato
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30.0),
-                          border: Border.all(width: 1.0, color: Colors.grey)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          // AssetImage("potato.jpg")
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(30.0),
-                            child: Image(
-                                fit: BoxFit.cover,
-                                height: 150.0,
-                                width: 150.0,
-                                image: AssetImage("assets/tamato.jpg")),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Container(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Tamato",
-                                  style: TextStyle(
-                                    fontSize: 20.0,
-                                    fontFamily: 'GrenzeGotisch',
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  "Price £ : 150 ",
-                                  style: TextStyle(
-                                    fontSize: 20.0,
-                                    fontFamily: 'GrenzeGotisch',
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                // Row(
-                                //   children: [
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("250g")),
-                                //     ),
-                                //     SizedBox(
-                                //       width: 10.0,
-                                //     ),
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("500g")),
-                                //     ),
-                                //     SizedBox(
-                                //       width: 10.0,
-                                //     ),
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("750g")),
-                                //     ),
-                                //     SizedBox(
-                                //       width: 10.0,
-                                //     ),
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("1kg")),
-                                //     ),
-                                //   ],
-                                // ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(right: 20.0),
-                            width: 48.0,
-                            decoration: BoxDecoration(
-                                color: Colors.lightGreenAccent,
-                                borderRadius: BorderRadius.circular(30.0)),
-                            child: IconButton(
-                              iconSize: 30.0,
-                              icon: Icon(
-                                Icons.add,
-
-                                // size: 50.0,
+                    Hero(
+                      tag: "assets/tamato.jpg",
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => TamatoScreen()));
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30.0),
+                              border:
+                                  Border.all(width: 1.0, color: Colors.grey)),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              // AssetImage("potato.jpg")
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(30.0),
+                                child: Image(
+                                    fit: BoxFit.cover,
+                                    height: 150.0,
+                                    width: 150.0,
+                                    image: AssetImage("assets/tamato.jpg")),
                               ),
-                              onPressed: () {},
-                            ),
+                              SizedBox(
+                                width: 10.0,
+                              ),
+                              Container(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Tamato",
+                                      style: TextStyle(
+                                        fontSize: 20.0,
+                                        fontFamily: 'GrenzeGotisch',
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      "Price £ : 150 ",
+                                      style: TextStyle(
+                                        fontSize: 20.0,
+                                        fontFamily: 'GrenzeGotisch',
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10.0,
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(right: 20.0),
+                                width: 48.0,
+                                decoration: BoxDecoration(
+                                    color: Colors.lightGreenAccent,
+                                    borderRadius: BorderRadius.circular(30.0)),
+                                child: IconButton(
+                                  iconSize: 30.0,
+                                  icon: Icon(
+                                    Icons.add,
+
+                                    // size: 50.0,
+                                  ),
+                                  onPressed: () {},
+                                ),
+                              ),
+                            ],
                           ),
-                        ],
+                        ),
                       ),
                     ),
                     SizedBox(
                       height: 20.0,
                     ),
                     //ladies finger
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30.0),
-                          border: Border.all(width: 1.0, color: Colors.grey)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          // AssetImage("potato.jpg")
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(30.0),
-                            child: Image(
-                                fit: BoxFit.cover,
-                                height: 150.0,
-                                width: 150.0,
-                                image: AssetImage("assets/ladiesfinger.jpg")),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Container(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Ladies Finger",
-                                  style: TextStyle(
-                                    fontSize: 20.0,
-                                    fontFamily: 'GrenzeGotisch',
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  "Price £ : 150 ",
-                                  style: TextStyle(
-                                    fontSize: 20.0,
-                                    fontFamily: 'GrenzeGotisch',
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                // Row(
-                                //   children: [
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("250g")),
-                                //     ),
-                                //     SizedBox(
-                                //       width: 10.0,
-                                //     ),
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("500g")),
-                                //     ),
-                                //     SizedBox(
-                                //       width: 10.0,
-                                //     ),
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("750g")),
-                                //     ),
-                                //     SizedBox(
-                                //       width: 10.0,
-                                //     ),
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("1kg")),
-                                //     ),
-                                //   ],
-                                // ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(right: 20.0),
-                            width: 48.0,
-                            decoration: BoxDecoration(
-                                color: Colors.lightGreenAccent,
-                                borderRadius: BorderRadius.circular(30.0)),
-                            child: IconButton(
-                              iconSize: 30.0,
-                              icon: Icon(
-                                Icons.add,
-
-                                // size: 50.0,
+                    Hero(
+                      tag: "assets/ladiesfinger.jpg",
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => LadiesFingerScreen()));
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30.0),
+                              border:
+                                  Border.all(width: 1.0, color: Colors.grey)),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              // AssetImage("potato.jpg")
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(30.0),
+                                child: Image(
+                                    fit: BoxFit.cover,
+                                    height: 150.0,
+                                    width: 150.0,
+                                    image:
+                                        AssetImage("assets/ladiesfinger.jpg")),
                               ),
-                              onPressed: () {},
-                            ),
+                              SizedBox(
+                                width: 10.0,
+                              ),
+                              Container(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Ladies Finger",
+                                      style: TextStyle(
+                                        fontSize: 20.0,
+                                        fontFamily: 'GrenzeGotisch',
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      "Price £ : 150 ",
+                                      style: TextStyle(
+                                        fontSize: 20.0,
+                                        fontFamily: 'GrenzeGotisch',
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10.0,
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(right: 20.0),
+                                width: 48.0,
+                                decoration: BoxDecoration(
+                                    color: Colors.lightGreenAccent,
+                                    borderRadius: BorderRadius.circular(30.0)),
+                                child: IconButton(
+                                  iconSize: 30.0,
+                                  icon: Icon(
+                                    Icons.add,
+
+                                    // size: 50.0,
+                                  ),
+                                  onPressed: () {},
+                                ),
+                              ),
+                            ],
                           ),
-                        ],
+                        ),
                       ),
                     ),
                     SizedBox(
                       height: 20.0,
                     ),
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30.0),
-                          border: Border.all(width: 1.0, color: Colors.grey)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          // AssetImage("potato.jpg")
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(30.0),
-                            child: Image(
-                                fit: BoxFit.cover,
-                                height: 150.0,
-                                width: 150.0,
-                                image: AssetImage("assets/bringal.jpg")),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Container(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Bringal",
-                                  style: TextStyle(
-                                    fontSize: 20.0,
-                                    fontFamily: 'GrenzeGotisch',
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  "Price £ : 150 ",
-                                  style: TextStyle(
-                                    fontSize: 20.0,
-                                    fontFamily: 'GrenzeGotisch',
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                // Row(
-                                //   children: [
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("250g")),
-                                //     ),
-                                //     SizedBox(
-                                //       width: 10.0,
-                                //     ),
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("500g")),
-                                //     ),
-                                //     SizedBox(
-                                //       width: 10.0,
-                                //     ),
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("750g")),
-                                //     ),
-                                //     SizedBox(
-                                //       width: 10.0,
-                                //     ),
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("1kg")),
-                                //     ),
-                                //   ],
-                                // ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(right: 20.0),
-                            width: 48.0,
-                            decoration: BoxDecoration(
-                                color: Colors.lightGreenAccent,
-                                borderRadius: BorderRadius.circular(30.0)),
-                            child: IconButton(
-                              iconSize: 30.0,
-                              icon: Icon(
-                                Icons.add,
-
-                                // size: 50.0,
+                    Hero(
+                      tag: "assets/bringal.jpg",
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => BringalScreen()));
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30.0),
+                              border:
+                                  Border.all(width: 1.0, color: Colors.grey)),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              // AssetImage("potato.jpg")
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(30.0),
+                                child: Image(
+                                    fit: BoxFit.cover,
+                                    height: 150.0,
+                                    width: 150.0,
+                                    image: AssetImage("assets/bringal.jpg")),
                               ),
-                              onPressed: () {},
-                            ),
+                              SizedBox(
+                                width: 10.0,
+                              ),
+                              Container(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Bringal",
+                                      style: TextStyle(
+                                        fontSize: 20.0,
+                                        fontFamily: 'GrenzeGotisch',
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      "Price £ : 150 ",
+                                      style: TextStyle(
+                                        fontSize: 20.0,
+                                        fontFamily: 'GrenzeGotisch',
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10.0,
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(right: 20.0),
+                                width: 48.0,
+                                decoration: BoxDecoration(
+                                    color: Colors.lightGreenAccent,
+                                    borderRadius: BorderRadius.circular(30.0)),
+                                child: IconButton(
+                                  iconSize: 30.0,
+                                  icon: Icon(
+                                    Icons.add,
+
+                                    // size: 50.0,
+                                  ),
+                                  onPressed: () {},
+                                ),
+                              ),
+                            ],
                           ),
-                        ],
+                        ),
                       ),
                     ),
                   ],

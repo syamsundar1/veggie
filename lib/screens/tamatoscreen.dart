@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:veggie/data/data.dart';
 import 'package:veggie/screens/cartscreen.dart';
 
-class PotatoScreen extends StatefulWidget {
+class TamatoScreen extends StatefulWidget {
   @override
-  _PotatoScreenState createState() => _PotatoScreenState();
+  _TamatoScreenState createState() => _TamatoScreenState();
 }
 
-class _PotatoScreenState extends State<PotatoScreen> {
+class _TamatoScreenState extends State<TamatoScreen> {
   List<Weight> _weight = Weight.getWeight();
   List<DropdownMenuItem<Weight>> _dropdownMenuItem;
   Weight _selectedWeight;
@@ -42,18 +42,18 @@ class _PotatoScreenState extends State<PotatoScreen> {
       body: Column(
         children: [
           Hero(
-            tag: "assets/potato.jpg",
+            tag: "assets/tamato.jpg",
             child: Image(
               fit: BoxFit.cover,
               height: MediaQuery.of(context).size.height / 3,
-              image: AssetImage("assets/potato.jpg"),
+              image: AssetImage("assets/tamato.jpg"),
             ),
           ),
           SizedBox(
             height: 40.0,
           ),
           Text(
-            "Potato",
+            "Tamato",
             style: TextStyle(fontSize: 40.0, fontFamily: 'GrenzeGotisch'),
           ),
           SizedBox(
