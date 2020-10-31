@@ -8,6 +8,17 @@ class CartScreen extends StatefulWidget {
 class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Cart",
+          style: TextStyle(
+              fontSize: 25,
+              fontFamily: 'GrenzeGotisch',
+              fontWeight: FontWeight.bold),
+        ),
+        centerTitle: true,
+      ),
+    );
   }
 }
