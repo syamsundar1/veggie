@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:veggie/screens/onionscreen.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -20,7 +21,7 @@ class _HomePageState extends State<HomePage> {
         ),
         centerTitle: true,
         actions: [
-          IconButton(icon: Icon(Icons.food_bank_rounded), onPressed: () {})
+          IconButton(icon: Icon(Icons.shopping_cart), onPressed: () {})
         ],
         elevation: 0.0,
       ),
@@ -62,125 +63,137 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Column(
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30.0),
-                          border: Border.all(width: 1.0, color: Colors.grey)),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          // AssetImage("potato.jpg")
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(30.0),
-                            child: Image(
-                                fit: BoxFit.cover,
-                                height: 150.0,
-                                width: 150.0,
-                                image: AssetImage("assets/onion.png")),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Container(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "Onion",
-                                  style: TextStyle(
-                                    fontSize: 20.0,
-                                    fontFamily: 'GrenzeGotisch',
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  "Price £ : 150 ",
-                                  style: TextStyle(
-                                    fontSize: 20.0,
-                                    fontFamily: 'GrenzeGotisch',
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                // Row(
-                                //   children: [
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("250g")),
-                                //     ),
-                                //     SizedBox(
-                                //       width: 10.0,
-                                //     ),
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("500g")),
-                                //     ),
-                                //     SizedBox(
-                                //       width: 10.0,
-                                //     ),
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("750g")),
-                                //     ),
-                                //     SizedBox(
-                                //       width: 10.0,
-                                //     ),
-                                //     InkWell(
-                                //       onTap: () {},
-                                //       child: Container(
-                                //           padding: EdgeInsets.all(5.0),
-                                //           decoration: BoxDecoration(
-                                //             borderRadius:
-                                //                 BorderRadius.circular(30.0),
-                                //             border: Border.all(width: 1.0),
-                                //           ),
-                                //           child: Text("1kg")),
-                                //     ),
-                                //   ],
-                                // ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            width: 10.0,
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(right: 20.0),
-                            width: 48.0,
-                            decoration: BoxDecoration(
-                                color: Colors.lightGreenAccent,
-                                borderRadius: BorderRadius.circular(30.0)),
-                            child: IconButton(
-                              iconSize: 30.0,
-                              icon: Icon(
-                                Icons.add,
-
-                                // size: 50.0,
+                    Hero(
+                      tag: "assets/onion.png",
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => OnionScreen()));
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30.0),
+                              border:
+                                  Border.all(width: 1.0, color: Colors.grey)),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              // AssetImage("potato.jpg")
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(30.0),
+                                child: Image(
+                                    fit: BoxFit.cover,
+                                    height: 150.0,
+                                    width: 150.0,
+                                    image: AssetImage("assets/onion.png")),
                               ),
-                              onPressed: () {},
-                            ),
-                          )
-                        ],
+                              SizedBox(
+                                width: 10.0,
+                              ),
+                              Container(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Onion",
+                                      style: TextStyle(
+                                        fontSize: 20.0,
+                                        fontFamily: 'GrenzeGotisch',
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      "Price £ : 150 ",
+                                      style: TextStyle(
+                                        fontSize: 20.0,
+                                        fontFamily: 'GrenzeGotisch',
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    // Row(
+                                    //   children: [
+                                    //     InkWell(
+                                    //       onTap: () {},
+                                    //       child: Container(
+                                    //           padding: EdgeInsets.all(5.0),
+                                    //           decoration: BoxDecoration(
+                                    //             borderRadius:
+                                    //                 BorderRadius.circular(30.0),
+                                    //             border: Border.all(width: 1.0),
+                                    //           ),
+                                    //           child: Text("250g")),
+                                    //     ),
+                                    //     SizedBox(
+                                    //       width: 10.0,
+                                    //     ),
+                                    //     InkWell(
+                                    //       onTap: () {},
+                                    //       child: Container(
+                                    //           padding: EdgeInsets.all(5.0),
+                                    //           decoration: BoxDecoration(
+                                    //             borderRadius:
+                                    //                 BorderRadius.circular(30.0),
+                                    //             border: Border.all(width: 1.0),
+                                    //           ),
+                                    //           child: Text("500g")),
+                                    //     ),
+                                    //     SizedBox(
+                                    //       width: 10.0,
+                                    //     ),
+                                    //     InkWell(
+                                    //       onTap: () {},
+                                    //       child: Container(
+                                    //           padding: EdgeInsets.all(5.0),
+                                    //           decoration: BoxDecoration(
+                                    //             borderRadius:
+                                    //                 BorderRadius.circular(30.0),
+                                    //             border: Border.all(width: 1.0),
+                                    //           ),
+                                    //           child: Text("750g")),
+                                    //     ),
+                                    //     SizedBox(
+                                    //       width: 10.0,
+                                    //     ),
+                                    //     InkWell(
+                                    //       onTap: () {},
+                                    //       child: Container(
+                                    //           padding: EdgeInsets.all(5.0),
+                                    //           decoration: BoxDecoration(
+                                    //             borderRadius:
+                                    //                 BorderRadius.circular(30.0),
+                                    //             border: Border.all(width: 1.0),
+                                    //           ),
+                                    //           child: Text("1kg")),
+                                    //     ),
+                                    //   ],
+                                    // ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10.0,
+                              ),
+                              Container(
+                                margin: EdgeInsets.only(right: 20.0),
+                                width: 48.0,
+                                decoration: BoxDecoration(
+                                    color: Colors.lightGreenAccent,
+                                    borderRadius: BorderRadius.circular(30.0)),
+                                child: IconButton(
+                                  iconSize: 30.0,
+                                  icon: Icon(
+                                    Icons.add,
+
+                                    // size: 50.0,
+                                  ),
+                                  onPressed: () {},
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
                       ),
                     ),
                     SizedBox(
