@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:veggie/data/data.dart';
 import 'package:veggie/screens/cartscreen.dart';
 
+String ladiesFinger = "Ladies Finger";
+
 class LadiesFingerScreen extends StatefulWidget {
   @override
   _LadiesFingerScreenState createState() => _LadiesFingerScreenState();
@@ -53,7 +55,7 @@ class _LadiesFingerScreenState extends State<LadiesFingerScreen> {
             height: 40.0,
           ),
           Text(
-            "Ladies Finger",
+            ladiesFinger,
             style: TextStyle(fontSize: 40.0, fontFamily: 'GrenzeGotisch'),
           ),
           SizedBox(

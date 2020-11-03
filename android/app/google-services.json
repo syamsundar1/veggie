@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "637379136154",
+    "firebase_url": "https://veggii.firebaseio.com",
+    "project_id": "veggii",
+    "storage_bucket": "veggii.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:637379136154:android:6e49e773a26f46b8162d23",
+        "android_client_info": {
+          "package_name": "com.example.veggie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "637379136154-mpsfo859o0tqljc8lpts6ncr6maglmrl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9CKg0DqLGEC07vRTXdn8OUaI0_YVQ5UY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "637379136154-mpsfo859o0tqljc8lpts6ncr6maglmrl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

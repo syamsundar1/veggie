@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:veggie/data/data.dart';
 import 'package:veggie/screens/cartscreen.dart';
 
+String bringal = "Bringal";
+
 class BringalScreen extends StatefulWidget {
   @override
   _BringalScreenState createState() => _BringalScreenState();
@@ -53,7 +55,7 @@ class _BringalScreenState extends State<BringalScreen> {
             height: 40.0,
           ),
           Text(
-            "Bringal",
+            bringal,
             style: TextStyle(fontSize: 40.0, fontFamily: 'GrenzeGotisch'),
           ),
           SizedBox(

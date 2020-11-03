@@ -6,6 +6,12 @@ import 'package:veggie/screens/onionscreen.dart';
 import 'package:veggie/screens/potatoscreen.dart';
 import 'package:veggie/screens/tamatoscreen.dart';
 
+String onion = "Onion";
+String potato = "Potato";
+String tamato = "Tamato";
+String ladiesFinger = "Ladies Finger";
+String bringal = "Bringal";
+
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -107,7 +113,7 @@ class _HomePageState extends State<HomePage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "Onion",
+                                      onion,
                                       style: TextStyle(
                                         fontSize: 20.0,
                                         fontFamily: 'GrenzeGotisch',
@@ -187,7 +193,7 @@ class _HomePageState extends State<HomePage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "Potato",
+                                      potato,
                                       style: TextStyle(
                                         fontSize: 20.0,
                                         fontFamily: 'GrenzeGotisch',
@@ -267,7 +273,7 @@ class _HomePageState extends State<HomePage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "Tamato",
+                                      tamato,
                                       style: TextStyle(
                                         fontSize: 20.0,
                                         fontFamily: 'GrenzeGotisch',
@@ -348,7 +354,7 @@ class _HomePageState extends State<HomePage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "Ladies Finger",
+                                      ladiesFinger,
                                       style: TextStyle(
                                         fontSize: 20.0,
                                         fontFamily: 'GrenzeGotisch',
@@ -427,7 +433,7 @@ class _HomePageState extends State<HomePage> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "Bringal",
+                                      bringal,
                                       style: TextStyle(
                                         fontSize: 20.0,
                                         fontFamily: 'GrenzeGotisch',

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:veggie/data/data.dart';
 import 'package:veggie/screens/cartscreen.dart';
 
+String onion = "Onion";
+
 class OnionScreen extends StatefulWidget {
   @override
   _OnionScreenState createState() => _OnionScreenState();
@@ -53,7 +55,7 @@ class _OnionScreenState extends State<OnionScreen> {
             height: 40.0,
           ),
           Text(
-            "Onion",
+            onion,
             style: TextStyle(fontSize: 40.0, fontFamily: 'GrenzeGotisch'),
           ),
           SizedBox(

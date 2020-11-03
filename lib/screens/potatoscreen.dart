@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:veggie/data/data.dart';
 import 'package:veggie/screens/cartscreen.dart';
 
+String potato = "Potato";
+
 class PotatoScreen extends StatefulWidget {
   @override
   _PotatoScreenState createState() => _PotatoScreenState();
@@ -53,7 +55,7 @@ class _PotatoScreenState extends State<PotatoScreen> {
             height: 40.0,
           ),
           Text(
-            "Potato",
+            potato,
             style: TextStyle(fontSize: 40.0, fontFamily: 'GrenzeGotisch'),
           ),
           SizedBox(

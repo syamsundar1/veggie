@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:veggie/data/data.dart';
 import 'package:veggie/screens/cartscreen.dart';
 
+String tamato = "Tamato";
+
 class TamatoScreen extends StatefulWidget {
   @override
   _TamatoScreenState createState() => _TamatoScreenState();
@@ -53,7 +55,7 @@ class _TamatoScreenState extends State<TamatoScreen> {
             height: 40.0,
           ),
           Text(
-            "Tamato",
+            tamato,
             style: TextStyle(fontSize: 40.0, fontFamily: 'GrenzeGotisch'),
           ),
           SizedBox(
