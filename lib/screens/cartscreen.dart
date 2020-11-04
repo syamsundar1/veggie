@@ -88,6 +88,7 @@ class _CartScreenState extends State<CartScreen> {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
+        // scrollDirection: Axi,
         physics: BouncingScrollPhysics(),
         child: Container(
           padding: EdgeInsets.all(20.0),
@@ -97,7 +98,7 @@ class _CartScreenState extends State<CartScreen> {
                 padding: EdgeInsets.only(right: 10.0),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30.0),
-                    border: Border.all(width: 3.0)),
+                    border: Border.all(width: 1.0)),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
