@@ -23,13 +23,10 @@ class _BringalScreenState extends State<BringalScreen> {
     return Scaffold(
       body: Column(
         children: [
-          Hero(
-            tag: "assets/bringal.jpg",
-            child: Image(
-              fit: BoxFit.cover,
-              height: MediaQuery.of(context).size.height / 3,
-              image: AssetImage("assets/bringal.jpg"),
-            ),
+          Image(
+            fit: BoxFit.cover,
+            height: MediaQuery.of(context).size.height / 3,
+            image: AssetImage("assets/bringal.jpg"),
           ),
           SizedBox(
             height: 40.0,

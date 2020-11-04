@@ -23,13 +23,10 @@ class _TamatoScreenState extends State<TamatoScreen> {
     return Scaffold(
       body: Column(
         children: [
-          Hero(
-            tag: "assets/tamato.jpg",
-            child: Image(
-              fit: BoxFit.cover,
-              height: MediaQuery.of(context).size.height / 3,
-              image: AssetImage("assets/tamato.jpg"),
-            ),
+          Image(
+            fit: BoxFit.cover,
+            height: MediaQuery.of(context).size.height / 3,
+            image: AssetImage("assets/tamato.jpg"),
           ),
           SizedBox(
             height: 40.0,

@@ -23,13 +23,10 @@ class _PotatoScreenState extends State<PotatoScreen> {
     return Scaffold(
       body: Column(
         children: [
-          Hero(
-            tag: "assets/potato.jpg",
-            child: Image(
-              fit: BoxFit.cover,
-              height: MediaQuery.of(context).size.height / 3,
-              image: AssetImage("assets/potato.jpg"),
-            ),
+          Image(
+            fit: BoxFit.cover,
+            height: MediaQuery.of(context).size.height / 3,
+            image: AssetImage("assets/potato.jpg"),
           ),
           SizedBox(
             height: 40.0,

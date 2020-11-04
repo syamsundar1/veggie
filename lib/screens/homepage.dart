@@ -85,381 +85,360 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Column(
                   children: [
-                    Hero(
-                      tag: "assets/onion.png",
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => OnionScreen()));
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => OnionScreen()));
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30.0),
+                            border: Border.all(width: 1.0, color: Colors.grey)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            ClipRRect(
                               borderRadius: BorderRadius.circular(30.0),
-                              border:
-                                  Border.all(width: 1.0, color: Colors.grey)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(30.0),
-                                child: Image(
-                                    fit: BoxFit.cover,
-                                    height: 150.0,
-                                    width: 150.0,
-                                    image: AssetImage("assets/onion.png")),
-                              ),
-                              SizedBox(
-                                width: 10.0,
-                              ),
-                              Container(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      onion,
-                                      style: TextStyle(
-                                        fontSize: 20.0,
-                                        fontFamily: 'GrenzeGotisch',
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                              child: Image(
+                                  fit: BoxFit.cover,
+                                  height: 150.0,
+                                  width: 150.0,
+                                  image: AssetImage("assets/onion.png")),
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    onion,
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontFamily: 'GrenzeGotisch',
+                                      fontWeight: FontWeight.bold,
                                     ),
-                                    Text(
-                                      "Price £ : 105 ",
-                                      style: TextStyle(
-                                        fontSize: 20.0,
-                                        fontFamily: 'GrenzeGotisch',
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10.0,
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(right: 20.0),
-                                width: 48.0,
-                                decoration: BoxDecoration(
-                                    color: Colors.lightGreenAccent,
-                                    borderRadius: BorderRadius.circular(30.0)),
-                                child: IconButton(
-                                  iconSize: 30.0,
-                                  icon: Icon(
-                                    Icons.add,
                                   ),
-                                  onPressed: () {},
+                                  Text(
+                                    "Price £ : 105 ",
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontFamily: 'GrenzeGotisch',
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right: 20.0),
+                              width: 48.0,
+                              decoration: BoxDecoration(
+                                  color: Colors.lightGreenAccent,
+                                  borderRadius: BorderRadius.circular(30.0)),
+                              child: IconButton(
+                                iconSize: 30.0,
+                                icon: Icon(
+                                  Icons.add,
                                 ),
-                              )
-                            ],
-                          ),
+                                onPressed: () {},
+                              ),
+                            )
+                          ],
                         ),
                       ),
                     ),
                     SizedBox(
                       height: 20.0,
                     ),
-                    Hero(
-                      tag: "assets/potato.jpg",
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => PotatoScreen()));
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PotatoScreen()));
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30.0),
+                            border: Border.all(width: 1.0, color: Colors.grey)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            ClipRRect(
                               borderRadius: BorderRadius.circular(30.0),
-                              border:
-                                  Border.all(width: 1.0, color: Colors.grey)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(30.0),
-                                child: Image(
-                                    fit: BoxFit.cover,
-                                    height: 150.0,
-                                    width: 150.0,
-                                    image: AssetImage("assets/potato.jpg")),
-                              ),
-                              SizedBox(
-                                width: 10.0,
-                              ),
-                              Container(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      potato,
-                                      style: TextStyle(
-                                        fontSize: 20.0,
-                                        fontFamily: 'GrenzeGotisch',
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                              child: Image(
+                                  fit: BoxFit.cover,
+                                  height: 150.0,
+                                  width: 150.0,
+                                  image: AssetImage("assets/potato.jpg")),
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    potato,
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontFamily: 'GrenzeGotisch',
+                                      fontWeight: FontWeight.bold,
                                     ),
-                                    Text(
-                                      "Price £ : 73 ",
-                                      style: TextStyle(
-                                        fontSize: 20.0,
-                                        fontFamily: 'GrenzeGotisch',
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10.0,
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(right: 20.0),
-                                width: 48.0,
-                                decoration: BoxDecoration(
-                                    color: Colors.lightGreenAccent,
-                                    borderRadius: BorderRadius.circular(30.0)),
-                                child: IconButton(
-                                  iconSize: 30.0,
-                                  icon: Icon(
-                                    Icons.add,
                                   ),
-                                  onPressed: () {},
-                                ),
+                                  Text(
+                                    "Price £ : 73 ",
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontFamily: 'GrenzeGotisch',
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right: 20.0),
+                              width: 48.0,
+                              decoration: BoxDecoration(
+                                  color: Colors.lightGreenAccent,
+                                  borderRadius: BorderRadius.circular(30.0)),
+                              child: IconButton(
+                                iconSize: 30.0,
+                                icon: Icon(
+                                  Icons.add,
+                                ),
+                                onPressed: () {},
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
                     SizedBox(
                       height: 20.0,
                     ),
-                    Hero(
-                      tag: "assets/tamato.jpg",
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => TamatoScreen()));
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => TamatoScreen()));
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30.0),
+                            border: Border.all(width: 1.0, color: Colors.grey)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            ClipRRect(
                               borderRadius: BorderRadius.circular(30.0),
-                              border:
-                                  Border.all(width: 1.0, color: Colors.grey)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(30.0),
-                                child: Image(
-                                    fit: BoxFit.cover,
-                                    height: 150.0,
-                                    width: 150.0,
-                                    image: AssetImage("assets/tamato.jpg")),
-                              ),
-                              SizedBox(
-                                width: 10.0,
-                              ),
-                              Container(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      tamato,
-                                      style: TextStyle(
-                                        fontSize: 20.0,
-                                        fontFamily: 'GrenzeGotisch',
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                              child: Image(
+                                  fit: BoxFit.cover,
+                                  height: 150.0,
+                                  width: 150.0,
+                                  image: AssetImage("assets/tamato.jpg")),
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    tamato,
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontFamily: 'GrenzeGotisch',
+                                      fontWeight: FontWeight.bold,
                                     ),
-                                    Text(
-                                      "Price £ : 28 ",
-                                      style: TextStyle(
-                                        fontSize: 20.0,
-                                        fontFamily: 'GrenzeGotisch',
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10.0,
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(right: 20.0),
-                                width: 48.0,
-                                decoration: BoxDecoration(
-                                    color: Colors.lightGreenAccent,
-                                    borderRadius: BorderRadius.circular(30.0)),
-                                child: IconButton(
-                                  iconSize: 30.0,
-                                  icon: Icon(
-                                    Icons.add,
                                   ),
-                                  onPressed: () {},
-                                ),
+                                  Text(
+                                    "Price £ : 28 ",
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontFamily: 'GrenzeGotisch',
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right: 20.0),
+                              width: 48.0,
+                              decoration: BoxDecoration(
+                                  color: Colors.lightGreenAccent,
+                                  borderRadius: BorderRadius.circular(30.0)),
+                              child: IconButton(
+                                iconSize: 30.0,
+                                icon: Icon(
+                                  Icons.add,
+                                ),
+                                onPressed: () {},
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
                     SizedBox(
                       height: 20.0,
                     ),
-                    Hero(
-                      tag: "assets/ladiesfinger.jpg",
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => LadiesFingerScreen()));
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => LadiesFingerScreen()));
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30.0),
+                            border: Border.all(width: 1.0, color: Colors.grey)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            ClipRRect(
                               borderRadius: BorderRadius.circular(30.0),
-                              border:
-                                  Border.all(width: 1.0, color: Colors.grey)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(30.0),
-                                child: Image(
-                                    fit: BoxFit.cover,
-                                    height: 150.0,
-                                    width: 150.0,
-                                    image:
-                                        AssetImage("assets/ladiesfinger.jpg")),
-                              ),
-                              SizedBox(
-                                width: 10.0,
-                              ),
-                              Container(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      ladiesFinger,
-                                      style: TextStyle(
-                                        fontSize: 20.0,
-                                        fontFamily: 'GrenzeGotisch',
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                              child: Image(
+                                  fit: BoxFit.cover,
+                                  height: 150.0,
+                                  width: 150.0,
+                                  image: AssetImage("assets/ladiesfinger.jpg")),
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    ladiesFinger,
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontFamily: 'GrenzeGotisch',
+                                      fontWeight: FontWeight.bold,
                                     ),
-                                    Text(
-                                      "Price £ : 31 ",
-                                      style: TextStyle(
-                                        fontSize: 20.0,
-                                        fontFamily: 'GrenzeGotisch',
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10.0,
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(right: 20.0),
-                                width: 48.0,
-                                decoration: BoxDecoration(
-                                    color: Colors.lightGreenAccent,
-                                    borderRadius: BorderRadius.circular(30.0)),
-                                child: IconButton(
-                                  iconSize: 30.0,
-                                  icon: Icon(
-                                    Icons.add,
                                   ),
-                                  onPressed: () {},
-                                ),
+                                  Text(
+                                    "Price £ : 31 ",
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontFamily: 'GrenzeGotisch',
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right: 20.0),
+                              width: 48.0,
+                              decoration: BoxDecoration(
+                                  color: Colors.lightGreenAccent,
+                                  borderRadius: BorderRadius.circular(30.0)),
+                              child: IconButton(
+                                iconSize: 30.0,
+                                icon: Icon(
+                                  Icons.add,
+                                ),
+                                onPressed: () {},
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
                     SizedBox(
                       height: 20.0,
                     ),
-                    Hero(
-                      tag: "assets/bringal.jpg",
-                      child: GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => BringalScreen()));
-                        },
-                        child: Container(
-                          decoration: BoxDecoration(
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => BringalScreen()));
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(30.0),
+                            border: Border.all(width: 1.0, color: Colors.grey)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            ClipRRect(
                               borderRadius: BorderRadius.circular(30.0),
-                              border:
-                                  Border.all(width: 1.0, color: Colors.grey)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              ClipRRect(
-                                borderRadius: BorderRadius.circular(30.0),
-                                child: Image(
-                                    fit: BoxFit.cover,
-                                    height: 150.0,
-                                    width: 150.0,
-                                    image: AssetImage("assets/bringal.jpg")),
-                              ),
-                              SizedBox(
-                                width: 10.0,
-                              ),
-                              Container(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      bringal,
-                                      style: TextStyle(
-                                        fontSize: 20.0,
-                                        fontFamily: 'GrenzeGotisch',
-                                        fontWeight: FontWeight.bold,
-                                      ),
+                              child: Image(
+                                  fit: BoxFit.cover,
+                                  height: 150.0,
+                                  width: 150.0,
+                                  image: AssetImage("assets/bringal.jpg")),
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    bringal,
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontFamily: 'GrenzeGotisch',
+                                      fontWeight: FontWeight.bold,
                                     ),
-                                    Text(
-                                      "Price £ : 40 ",
-                                      style: TextStyle(
-                                        fontSize: 20.0,
-                                        fontFamily: 'GrenzeGotisch',
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10.0,
-                              ),
-                              Container(
-                                margin: EdgeInsets.only(right: 20.0),
-                                width: 48.0,
-                                decoration: BoxDecoration(
-                                    color: Colors.lightGreenAccent,
-                                    borderRadius: BorderRadius.circular(30.0)),
-                                child: IconButton(
-                                  iconSize: 30.0,
-                                  icon: Icon(
-                                    Icons.add,
                                   ),
-                                  onPressed: () {},
-                                ),
+                                  Text(
+                                    "Price £ : 40 ",
+                                    style: TextStyle(
+                                      fontSize: 20.0,
+                                      fontFamily: 'GrenzeGotisch',
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
+                            ),
+                            SizedBox(
+                              width: 10.0,
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(right: 20.0),
+                              width: 48.0,
+                              decoration: BoxDecoration(
+                                  color: Colors.lightGreenAccent,
+                                  borderRadius: BorderRadius.circular(30.0)),
+                              child: IconButton(
+                                iconSize: 30.0,
+                                icon: Icon(
+                                  Icons.add,
+                                ),
+                                onPressed: () {},
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),

@@ -23,13 +23,10 @@ class _OnionScreenState extends State<OnionScreen> {
     return Scaffold(
       body: Column(
         children: [
-          Hero(
-            tag: "assets/onion.png",
-            child: Image(
-              fit: BoxFit.cover,
-              height: MediaQuery.of(context).size.height / 3,
-              image: AssetImage("assets/onion.png"),
-            ),
+          Image(
+            fit: BoxFit.cover,
+            height: MediaQuery.of(context).size.height / 3,
+            image: AssetImage("assets/onion.png"),
           ),
           SizedBox(
             height: 40.0,

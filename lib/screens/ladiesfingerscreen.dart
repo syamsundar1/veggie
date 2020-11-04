@@ -23,13 +23,10 @@ class _LadiesFingerScreenState extends State<LadiesFingerScreen> {
     return Scaffold(
       body: Column(
         children: [
-          Hero(
-            tag: "assets/ladiesfinger.jpg",
-            child: Image(
-              fit: BoxFit.cover,
-              height: MediaQuery.of(context).size.height / 3,
-              image: AssetImage("assets/ladiesfinger.jpg"),
-            ),
+          Image(
+            fit: BoxFit.cover,
+            height: MediaQuery.of(context).size.height / 3,
+            image: AssetImage("assets/ladiesfinger.jpg"),
           ),
           SizedBox(
             height: 40.0,
