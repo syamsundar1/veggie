@@ -18,6 +18,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  var _controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,9 +61,13 @@ class _HomePageState extends State<HomePage> {
                   Icons.search,
                   color: Colors.green,
                 ),
-                suffixIcon: Icon(
-                  Icons.close,
-                  color: Colors.green,
+                suffixIcon: IconButton(
+                  onPressed: () {
+                    setState(() {
+                      _controller.clear();
+                    });
+                  },
+                  icon: Icon(Icons.clear),
                 ),
                 filled: true,
                 fillColor: Colors.grey[300],
@@ -96,7 +102,6 @@ class _HomePageState extends State<HomePage> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              // AssetImage("potato.jpg")
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(30.0),
                                 child: Image(
@@ -121,7 +126,7 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                     Text(
-                                      "Price £ : 150 ",
+                                      "Price £ : 50 ",
                                       style: TextStyle(
                                         fontSize: 20.0,
                                         fontFamily: 'GrenzeGotisch',
@@ -144,8 +149,6 @@ class _HomePageState extends State<HomePage> {
                                   iconSize: 30.0,
                                   icon: Icon(
                                     Icons.add,
-
-                                    // size: 50.0,
                                   ),
                                   onPressed: () {},
                                 ),
@@ -158,7 +161,6 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(
                       height: 20.0,
                     ),
-                    // potato
                     Hero(
                       tag: "assets/potato.jpg",
                       child: GestureDetector(
@@ -176,7 +178,6 @@ class _HomePageState extends State<HomePage> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              // AssetImage("potato.jpg")
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(30.0),
                                 child: Image(
@@ -201,7 +202,7 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                     Text(
-                                      "Price £ : 150 ",
+                                      "Price £ : 100 ",
                                       style: TextStyle(
                                         fontSize: 20.0,
                                         fontFamily: 'GrenzeGotisch',
@@ -224,8 +225,6 @@ class _HomePageState extends State<HomePage> {
                                   iconSize: 30.0,
                                   icon: Icon(
                                     Icons.add,
-
-                                    // size: 50.0,
                                   ),
                                   onPressed: () {},
                                 ),
@@ -238,7 +237,6 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(
                       height: 20.0,
                     ),
-                    // tamato
                     Hero(
                       tag: "assets/tamato.jpg",
                       child: GestureDetector(
@@ -256,7 +254,6 @@ class _HomePageState extends State<HomePage> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              // AssetImage("potato.jpg")
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(30.0),
                                 child: Image(
@@ -281,7 +278,7 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                     Text(
-                                      "Price £ : 150 ",
+                                      "Price £ : 30 ",
                                       style: TextStyle(
                                         fontSize: 20.0,
                                         fontFamily: 'GrenzeGotisch',
@@ -304,8 +301,6 @@ class _HomePageState extends State<HomePage> {
                                   iconSize: 30.0,
                                   icon: Icon(
                                     Icons.add,
-
-                                    // size: 50.0,
                                   ),
                                   onPressed: () {},
                                 ),
@@ -318,7 +313,6 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(
                       height: 20.0,
                     ),
-                    //ladies finger
                     Hero(
                       tag: "assets/ladiesfinger.jpg",
                       child: GestureDetector(
@@ -336,7 +330,6 @@ class _HomePageState extends State<HomePage> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              // AssetImage("potato.jpg")
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(30.0),
                                 child: Image(
@@ -362,7 +355,7 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                     Text(
-                                      "Price £ : 150 ",
+                                      "Price £ : 40 ",
                                       style: TextStyle(
                                         fontSize: 20.0,
                                         fontFamily: 'GrenzeGotisch',
@@ -385,8 +378,6 @@ class _HomePageState extends State<HomePage> {
                                   iconSize: 30.0,
                                   icon: Icon(
                                     Icons.add,
-
-                                    // size: 50.0,
                                   ),
                                   onPressed: () {},
                                 ),
@@ -416,7 +407,6 @@ class _HomePageState extends State<HomePage> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              // AssetImage("potato.jpg")
                               ClipRRect(
                                 borderRadius: BorderRadius.circular(30.0),
                                 child: Image(
@@ -441,7 +431,7 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                     Text(
-                                      "Price £ : 150 ",
+                                      "Price £ : 80 ",
                                       style: TextStyle(
                                         fontSize: 20.0,
                                         fontFamily: 'GrenzeGotisch',
@@ -464,8 +454,6 @@ class _HomePageState extends State<HomePage> {
                                   iconSize: 30.0,
                                   icon: Icon(
                                     Icons.add,
-
-                                    // size: 50.0,
                                   ),
                                   onPressed: () {},
                                 ),

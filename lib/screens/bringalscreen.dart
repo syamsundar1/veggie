@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:veggie/data/data.dart';
+
 import 'package:veggie/screens/cartscreen.dart';
 
 String bringal = "Bringal";
@@ -10,32 +10,12 @@ class BringalScreen extends StatefulWidget {
 }
 
 class _BringalScreenState extends State<BringalScreen> {
-  List<Weight> _weight = Weight.getWeight();
-  List<DropdownMenuItem<Weight>> _dropdownMenuItem;
-  Weight _selectedWeight;
+  List<int> itemweight = [250, 500, 750, 1000];
+  int bringalweight;
 
   @override
   void initState() {
-    _dropdownMenuItem = builddropdownMenuItems(_weight);
-    _selectedWeight = _dropdownMenuItem[0].value;
     super.initState();
-  }
-
-  List<DropdownMenuItem<Weight>> builddropdownMenuItems(List weights) {
-    List<DropdownMenuItem<Weight>> items = List();
-    for (Weight weight in weights) {
-      items.add(DropdownMenuItem(
-        value: weight,
-        child: Text(weight.weight.toString()),
-      ));
-    }
-    return items;
-  }
-
-  onChangeDropdownItem(Weight seletctedweight) {
-    setState(() {
-      _selectedWeight = seletctedweight;
-    });
   }
 
   @override
@@ -80,13 +60,21 @@ class _BringalScreenState extends State<BringalScreen> {
                       ),
                       DropdownButton(
                         elevation: 0,
-                        // icon: Icon(Icons.arrow_circle_down_sharp),
-                        // iconEnabledColor: Colors.green,
                         autofocus: true,
+                        hint: Text("weight"),
                         focusColor: Colors.grey,
-                        value: _selectedWeight,
-                        items: _dropdownMenuItem,
-                        onChanged: onChangeDropdownItem,
+                        onChanged: (value) {
+                          setState(() {
+                            bringalweight = value;
+                          });
+                        },
+                        value: bringalweight,
+                        items: itemweight.map((value) {
+                          return DropdownMenuItem(
+                            value: value,
+                            child: Text(value.toString()),
+                          );
+                        }).toList(),
                       ),
                     ],
                   ),
@@ -101,7 +89,14 @@ class _BringalScreenState extends State<BringalScreen> {
                     borderRadius: BorderRadius.circular(30.0),
                   ),
                   child: FlatButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => CartScreen(
+                                    bringalweightcart: bringalweight,
+                                  )));
+                    },
                     child: Text(
                       "Add to cart",
                       style: TextStyle(fontSize: 16.0),
@@ -122,8 +117,12 @@ class _BringalScreenState extends State<BringalScreen> {
         child: Center(
           child: FlatButton(
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => CartScreen()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => CartScreen(
+                            bringalweightcart: bringalweight,
+                          )));
             },
             child: Text(
               "Buy Now",
