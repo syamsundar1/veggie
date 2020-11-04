@@ -126,7 +126,7 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                     Text(
-                                      "Price £ : 50 ",
+                                      "Price £ : 105 ",
                                       style: TextStyle(
                                         fontSize: 20.0,
                                         fontFamily: 'GrenzeGotisch',
@@ -202,7 +202,7 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                     Text(
-                                      "Price £ : 100 ",
+                                      "Price £ : 73 ",
                                       style: TextStyle(
                                         fontSize: 20.0,
                                         fontFamily: 'GrenzeGotisch',
@@ -278,7 +278,7 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                     Text(
-                                      "Price £ : 30 ",
+                                      "Price £ : 28 ",
                                       style: TextStyle(
                                         fontSize: 20.0,
                                         fontFamily: 'GrenzeGotisch',
@@ -355,7 +355,7 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                     Text(
-                                      "Price £ : 40 ",
+                                      "Price £ : 31 ",
                                       style: TextStyle(
                                         fontSize: 20.0,
                                         fontFamily: 'GrenzeGotisch',
@@ -431,7 +431,7 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ),
                                     Text(
-                                      "Price £ : 80 ",
+                                      "Price £ : 40 ",
                                       style: TextStyle(
                                         fontSize: 20.0,
                                         fontFamily: 'GrenzeGotisch',

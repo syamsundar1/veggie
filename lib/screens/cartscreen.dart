@@ -77,350 +77,320 @@ class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text(
-            "Cart",
-            style: TextStyle(
-                fontSize: 25,
-                fontFamily: 'GrenzeGotisch',
-                fontWeight: FontWeight.bold),
-          ),
-          centerTitle: true,
+      appBar: AppBar(
+        title: Text(
+          "Cart",
+          style: TextStyle(
+              fontSize: 25,
+              fontFamily: 'GrenzeGotisch',
+              fontWeight: FontWeight.bold),
         ),
-        body: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
-          child: Container(
-            padding: EdgeInsets.all(20.0),
-            child: Column(
-              children: [
-                Container(
-                  padding: EdgeInsets.only(right: 10.0),
-                  decoration: BoxDecoration(
+        centerTitle: true,
+      ),
+      body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Container(
+          padding: EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              Container(
+                padding: EdgeInsets.only(right: 10.0),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30.0),
+                    border: Border.all(width: 3.0)),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ClipRRect(
                       borderRadius: BorderRadius.circular(30.0),
-                      border: Border.all(width: 3.0)),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(30.0),
-                        child: Image(
-                            fit: BoxFit.cover,
-                            height: 150.0,
-                            width: 150.0,
-                            image: AssetImage("assets/onion.png")),
-                      ),
-                      Center(
-                        child: Container(
-                          decoration: BoxDecoration(
-                              border:
-                                  Border.all(width: 3.0, color: Colors.green),
-                              borderRadius: BorderRadius.circular(30.0)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              IconButton(
-                                  icon: Icon(Icons.minimize),
-                                  onPressed: () {
-                                    setState(() {
-                                      if (onioncount == 0) {
-                                        onioncount = 0;
-                                        onoionmrp = onion1kg * onioncount;
-                                        totalmrp = onoionmrp +
-                                            potatomrp +
-                                            tamatomrp +
-                                            ladiesfingermrp +
-                                            bringalmrp;
-                                      } else {
-                                        onioncount = onioncount - 1;
-                                        onoionmrp = onion1kg * onioncount;
-                                        totalmrp = onoionmrp +
-                                            potatomrp +
-                                            tamatomrp +
-                                            ladiesfingermrp +
-                                            bringalmrp;
-                                      }
-                                    });
-                                    addoniondata();
-                                  }),
-                              Text(onioncount.toString()),
-                              IconButton(
-                                  icon: Icon(Icons.add),
-                                  onPressed: () {
-                                    setState(() {
-                                      onioncount = onioncount + 1;
+                      child: Image(
+                          fit: BoxFit.cover,
+                          height: 150.0,
+                          width: 150.0,
+                          image: AssetImage("assets/onion.png")),
+                    ),
+                    Center(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(width: 3.0, color: Colors.green),
+                            borderRadius: BorderRadius.circular(30.0)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            IconButton(
+                                icon: Icon(Icons.minimize),
+                                onPressed: () {
+                                  setState(() {
+                                    if (onioncount == 0) {
+                                      onioncount = 0;
                                       onoionmrp = onion1kg * onioncount;
                                       totalmrp = onoionmrp +
                                           potatomrp +
                                           tamatomrp +
                                           ladiesfingermrp +
                                           bringalmrp;
-                                    });
-                                    addoniondata();
-                                  }),
-                            ],
-                          ),
+                                    } else {
+                                      onioncount = onioncount - 1;
+                                      onoionmrp = onion1kg * onioncount;
+                                      totalmrp = onoionmrp +
+                                          potatomrp +
+                                          tamatomrp +
+                                          ladiesfingermrp +
+                                          bringalmrp;
+                                    }
+                                  });
+                                  addoniondata();
+                                }),
+                            Text(onioncount.toString()),
+                            IconButton(
+                                icon: Icon(Icons.add),
+                                onPressed: () {
+                                  setState(() {
+                                    onioncount = onioncount + 1;
+                                    onoionmrp = onion1kg * onioncount;
+                                    totalmrp = onoionmrp +
+                                        potatomrp +
+                                        tamatomrp +
+                                        ladiesfingermrp +
+                                        bringalmrp;
+                                  });
+                                  addoniondata();
+                                }),
+                          ],
                         ),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "₹",
-                            style: TextStyle(
-                                fontSize: 30.0, fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            onoionmrp.toString(),
-                            style: TextStyle(
-                                fontSize: 25.0, fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "₹",
+                          style: TextStyle(
+                              fontSize: 30.0, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          onoionmrp.toString(),
+                          style: TextStyle(
+                              fontSize: 25.0, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-                SizedBox(
-                  height: 30.0,
-                ),
-                Container(
-                  padding: EdgeInsets.only(right: 10.0),
-                  decoration: BoxDecoration(
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              Container(
+                padding: EdgeInsets.only(right: 10.0),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30.0),
+                    border: Border.all(width: 3.0)),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ClipRRect(
                       borderRadius: BorderRadius.circular(30.0),
-                      border: Border.all(width: 3.0)),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(30.0),
-                        child: Image(
-                            fit: BoxFit.cover,
-                            height: 150.0,
-                            width: 150.0,
-                            image: AssetImage("assets/potato.jpg")),
-                      ),
-                      Center(
-                        child: Container(
-                          decoration: BoxDecoration(
-                              border:
-                                  Border.all(width: 3.0, color: Colors.green),
-                              borderRadius: BorderRadius.circular(30.0)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              IconButton(
-                                  icon: Icon(Icons.minimize),
-                                  onPressed: () {
-                                    setState(() {
-                                      if (potatocout <= 0) {
-                                        potatocout = 0;
-                                        potatomrp = potatocout * potato1kg;
-                                        totalmrp = onoionmrp +
-                                            potatomrp +
-                                            tamatomrp +
-                                            ladiesfingermrp +
-                                            bringalmrp;
-                                      } else {
-                                        potatocout = potatocout - 1;
-                                        potatomrp = potatocout * potato1kg;
-                                        totalmrp = onoionmrp +
-                                            potatomrp +
-                                            tamatomrp +
-                                            ladiesfingermrp +
-                                            bringalmrp;
-                                      }
-                                    });
-                                  }),
-                              Text(potatocout.toString()),
-                              IconButton(
-                                  icon: Icon(Icons.add),
-                                  onPressed: () {
-                                    setState(() {
-                                      potatocout = potatocout + 1;
+                      child: Image(
+                          fit: BoxFit.cover,
+                          height: 150.0,
+                          width: 150.0,
+                          image: AssetImage("assets/potato.jpg")),
+                    ),
+                    Center(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(width: 3.0, color: Colors.green),
+                            borderRadius: BorderRadius.circular(30.0)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            IconButton(
+                                icon: Icon(Icons.minimize),
+                                onPressed: () {
+                                  setState(() {
+                                    if (potatocout <= 0) {
+                                      potatocout = 0;
                                       potatomrp = potatocout * potato1kg;
                                       totalmrp = onoionmrp +
                                           potatomrp +
                                           tamatomrp +
                                           ladiesfingermrp +
                                           bringalmrp;
-                                    });
-                                  }),
-                            ],
-                          ),
+                                    } else {
+                                      potatocout = potatocout - 1;
+                                      potatomrp = potatocout * potato1kg;
+                                      totalmrp = onoionmrp +
+                                          potatomrp +
+                                          tamatomrp +
+                                          ladiesfingermrp +
+                                          bringalmrp;
+                                    }
+                                  });
+                                }),
+                            Text(potatocout.toString()),
+                            IconButton(
+                                icon: Icon(Icons.add),
+                                onPressed: () {
+                                  setState(() {
+                                    potatocout = potatocout + 1;
+                                    potatomrp = potatocout * potato1kg;
+                                    totalmrp = onoionmrp +
+                                        potatomrp +
+                                        tamatomrp +
+                                        ladiesfingermrp +
+                                        bringalmrp;
+                                  });
+                                }),
+                          ],
                         ),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "₹",
-                            style: TextStyle(
-                                fontSize: 30.0, fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            potatomrp.toString(),
-                            style: TextStyle(
-                                fontSize: 25.0, fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "₹",
+                          style: TextStyle(
+                              fontSize: 30.0, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          potatomrp.toString(),
+                          style: TextStyle(
+                              fontSize: 25.0, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-                SizedBox(
-                  height: 30.0,
-                ),
-                Container(
-                  padding: EdgeInsets.only(right: 10.0),
-                  decoration: BoxDecoration(
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              Container(
+                padding: EdgeInsets.only(right: 10.0),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30.0),
+                    border: Border.all(width: 3.0)),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ClipRRect(
                       borderRadius: BorderRadius.circular(30.0),
-                      border: Border.all(width: 3.0)),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(30.0),
-                        child: Image(
-                            fit: BoxFit.cover,
-                            height: 150.0,
-                            width: 150.0,
-                            image: AssetImage("assets/tamato.jpg")),
-                      ),
-                      Center(
-                        child: Container(
-                          decoration: BoxDecoration(
-                              border:
-                                  Border.all(width: 3.0, color: Colors.green),
-                              borderRadius: BorderRadius.circular(30.0)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              IconButton(
-                                  icon: Icon(Icons.minimize),
-                                  onPressed: () {
-                                    setState(() {
-                                      if (tamatocount == 0) {
-                                        tamatocount = 0;
-                                        tamatomrp = tamato1kg * tamatocount;
-                                        totalmrp = onoionmrp +
-                                            potatomrp +
-                                            tamatomrp +
-                                            ladiesfingermrp +
-                                            bringalmrp;
-                                      } else {
-                                        tamatocount = tamatocount - 1;
-                                        tamatomrp = tamato1kg * tamatocount;
-                                        totalmrp = onoionmrp +
-                                            potatomrp +
-                                            tamatomrp +
-                                            ladiesfingermrp +
-                                            bringalmrp;
-                                      }
-                                    });
-                                  }),
-                              Text(tamatocount.toString()),
-                              IconButton(
-                                  icon: Icon(Icons.add),
-                                  onPressed: () {
-                                    setState(() {
-                                      tamatocount = tamatocount + 1;
+                      child: Image(
+                          fit: BoxFit.cover,
+                          height: 150.0,
+                          width: 150.0,
+                          image: AssetImage("assets/tamato.jpg")),
+                    ),
+                    Center(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(width: 3.0, color: Colors.green),
+                            borderRadius: BorderRadius.circular(30.0)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            IconButton(
+                                icon: Icon(Icons.minimize),
+                                onPressed: () {
+                                  setState(() {
+                                    if (tamatocount == 0) {
+                                      tamatocount = 0;
                                       tamatomrp = tamato1kg * tamatocount;
                                       totalmrp = onoionmrp +
                                           potatomrp +
                                           tamatomrp +
                                           ladiesfingermrp +
                                           bringalmrp;
-                                    });
-                                  }),
-                            ],
-                          ),
+                                    } else {
+                                      tamatocount = tamatocount - 1;
+                                      tamatomrp = tamato1kg * tamatocount;
+                                      totalmrp = onoionmrp +
+                                          potatomrp +
+                                          tamatomrp +
+                                          ladiesfingermrp +
+                                          bringalmrp;
+                                    }
+                                  });
+                                }),
+                            Text(tamatocount.toString()),
+                            IconButton(
+                                icon: Icon(Icons.add),
+                                onPressed: () {
+                                  setState(() {
+                                    tamatocount = tamatocount + 1;
+                                    tamatomrp = tamato1kg * tamatocount;
+                                    totalmrp = onoionmrp +
+                                        potatomrp +
+                                        tamatomrp +
+                                        ladiesfingermrp +
+                                        bringalmrp;
+                                  });
+                                }),
+                          ],
                         ),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "₹",
-                            style: TextStyle(
-                                fontSize: 30.0, fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            tamatomrp.toString(),
-                            style: TextStyle(
-                                fontSize: 25.0, fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "₹",
+                          style: TextStyle(
+                              fontSize: 30.0, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          tamatomrp.toString(),
+                          style: TextStyle(
+                              fontSize: 25.0, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-                SizedBox(
-                  height: 30.0,
-                ),
-                Container(
-                  padding: EdgeInsets.only(right: 10.0),
-                  decoration: BoxDecoration(
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              Container(
+                padding: EdgeInsets.only(right: 10.0),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30.0),
+                    border: Border.all(width: 3.0)),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ClipRRect(
                       borderRadius: BorderRadius.circular(30.0),
-                      border: Border.all(width: 3.0)),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(30.0),
-                        child: Image(
-                            fit: BoxFit.cover,
-                            height: 150.0,
-                            width: 150.0,
-                            image: AssetImage("assets/ladiesfinger.jpg")),
-                      ),
-                      Center(
-                        child: Container(
-                          decoration: BoxDecoration(
-                              border:
-                                  Border.all(width: 3.0, color: Colors.green),
-                              borderRadius: BorderRadius.circular(30.0)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              IconButton(
-                                  icon: Icon(Icons.minimize),
-                                  onPressed: () {
-                                    setState(() {
-                                      if (ladiesfingercount == 0) {
-                                        ladiesfingercount = 0;
-                                        ladiesfingermrp =
-                                            ladiesfingercount * ladiefinger1kg;
-                                        totalmrp = onoionmrp +
-                                            potatomrp +
-                                            tamatomrp +
-                                            ladiesfingermrp +
-                                            bringalmrp;
-                                      } else {
-                                        ladiesfingercount =
-                                            ladiesfingercount - 1;
-                                        ladiesfingermrp =
-                                            ladiesfingercount * ladiefinger1kg;
-                                        totalmrp = onoionmrp +
-                                            potatomrp +
-                                            tamatomrp +
-                                            ladiesfingermrp +
-                                            bringalmrp;
-                                      }
-                                    });
-                                  }),
-                              Text(ladiesfingercount.toString()),
-                              IconButton(
-                                  icon: Icon(Icons.add),
-                                  onPressed: () {
-                                    setState(() {
-                                      ladiesfingercount = ladiesfingercount + 1;
+                      child: Image(
+                          fit: BoxFit.cover,
+                          height: 150.0,
+                          width: 150.0,
+                          image: AssetImage("assets/ladiesfinger.jpg")),
+                    ),
+                    Center(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(width: 3.0, color: Colors.green),
+                            borderRadius: BorderRadius.circular(30.0)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            IconButton(
+                                icon: Icon(Icons.minimize),
+                                onPressed: () {
+                                  setState(() {
+                                    if (ladiesfingercount == 0) {
+                                      ladiesfingercount = 0;
                                       ladiesfingermrp =
                                           ladiesfingercount * ladiefinger1kg;
                                       totalmrp = onoionmrp +
@@ -428,139 +398,186 @@ class _CartScreenState extends State<CartScreen> {
                                           tamatomrp +
                                           ladiesfingermrp +
                                           bringalmrp;
-                                    });
-                                  }),
-                            ],
-                          ),
+                                    } else {
+                                      ladiesfingercount = ladiesfingercount - 1;
+                                      ladiesfingermrp =
+                                          ladiesfingercount * ladiefinger1kg;
+                                      totalmrp = onoionmrp +
+                                          potatomrp +
+                                          tamatomrp +
+                                          ladiesfingermrp +
+                                          bringalmrp;
+                                    }
+                                  });
+                                }),
+                            Text(ladiesfingercount.toString()),
+                            IconButton(
+                                icon: Icon(Icons.add),
+                                onPressed: () {
+                                  setState(() {
+                                    ladiesfingercount = ladiesfingercount + 1;
+                                    ladiesfingermrp =
+                                        ladiesfingercount * ladiefinger1kg;
+                                    totalmrp = onoionmrp +
+                                        potatomrp +
+                                        tamatomrp +
+                                        ladiesfingermrp +
+                                        bringalmrp;
+                                  });
+                                }),
+                          ],
                         ),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "₹",
-                            style: TextStyle(
-                                fontSize: 30.0, fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            ladiesfingermrp.toString(),
-                            style: TextStyle(
-                                fontSize: 25.0, fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "₹",
+                          style: TextStyle(
+                              fontSize: 30.0, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          ladiesfingermrp.toString(),
+                          style: TextStyle(
+                              fontSize: 25.0, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-                SizedBox(
-                  height: 30.0,
-                ),
-                Container(
-                  padding: EdgeInsets.only(right: 10.0),
-                  decoration: BoxDecoration(
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              Container(
+                padding: EdgeInsets.only(right: 10.0),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30.0),
+                    border: Border.all(width: 3.0)),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ClipRRect(
                       borderRadius: BorderRadius.circular(30.0),
-                      border: Border.all(width: 3.0)),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(30.0),
-                        child: Image(
-                            fit: BoxFit.cover,
-                            height: 150.0,
-                            width: 150.0,
-                            image: AssetImage("assets/bringal.jpg")),
-                      ),
-                      Center(
-                        child: Container(
-                          decoration: BoxDecoration(
-                              border:
-                                  Border.all(width: 3.0, color: Colors.green),
-                              borderRadius: BorderRadius.circular(30.0)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              IconButton(
-                                  icon: Icon(Icons.minimize),
-                                  onPressed: () {
-                                    setState(() {
-                                      if (bringalcount == 0) {
-                                        bringalcount = 0;
-                                        bringalmrp = bringal1kg * bringalcount;
-                                        totalmrp = onoionmrp +
-                                            potatomrp +
-                                            tamatomrp +
-                                            ladiesfingermrp +
-                                            bringalmrp;
-                                      } else {
-                                        bringalcount = bringalcount - 1;
-                                        bringalmrp = bringal1kg * bringalcount;
-                                        totalmrp = onoionmrp +
-                                            potatomrp +
-                                            tamatomrp +
-                                            ladiesfingermrp +
-                                            bringalmrp;
-                                      }
-                                    });
-                                  }),
-                              Text(bringalcount.toString()),
-                              IconButton(
-                                  icon: Icon(Icons.add),
-                                  onPressed: () {
-                                    setState(() {
-                                      bringalcount = bringalcount + 1;
+                      child: Image(
+                          fit: BoxFit.cover,
+                          height: 150.0,
+                          width: 150.0,
+                          image: AssetImage("assets/bringal.jpg")),
+                    ),
+                    Center(
+                      child: Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(width: 3.0, color: Colors.green),
+                            borderRadius: BorderRadius.circular(30.0)),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            IconButton(
+                                icon: Icon(Icons.minimize),
+                                onPressed: () {
+                                  setState(() {
+                                    if (bringalcount == 0) {
+                                      bringalcount = 0;
                                       bringalmrp = bringal1kg * bringalcount;
                                       totalmrp = onoionmrp +
                                           potatomrp +
                                           tamatomrp +
                                           ladiesfingermrp +
                                           bringalmrp;
-                                    });
-                                  }),
-                            ],
-                          ),
+                                    } else {
+                                      bringalcount = bringalcount - 1;
+                                      bringalmrp = bringal1kg * bringalcount;
+                                      totalmrp = onoionmrp +
+                                          potatomrp +
+                                          tamatomrp +
+                                          ladiesfingermrp +
+                                          bringalmrp;
+                                    }
+                                  });
+                                }),
+                            Text(bringalcount.toString()),
+                            IconButton(
+                                icon: Icon(Icons.add),
+                                onPressed: () {
+                                  setState(() {
+                                    bringalcount = bringalcount + 1;
+                                    bringalmrp = bringal1kg * bringalcount;
+                                    totalmrp = onoionmrp +
+                                        potatomrp +
+                                        tamatomrp +
+                                        ladiesfingermrp +
+                                        bringalmrp;
+                                  });
+                                }),
+                          ],
                         ),
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "₹",
-                            style: TextStyle(
-                                fontSize: 30.0, fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            bringalmrp.toString(),
-                            style: TextStyle(
-                                fontSize: 25.0, fontWeight: FontWeight.bold),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 30.0,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(
-                      "Total Price : ",
-                      style: TextStyle(
-                          fontSize: 35.0, fontWeight: FontWeight.bold),
                     ),
-                    Text(
-                      "$totalmrp Rs",
-                      style: TextStyle(fontSize: 30.0),
-                    )
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "₹",
+                          style: TextStyle(
+                              fontSize: 30.0, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          bringalmrp.toString(),
+                          style: TextStyle(
+                              fontSize: 25.0, fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
                   ],
-                )
-              ],
+                ),
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Total Price : ",
+                    style:
+                        TextStyle(fontSize: 35.0, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "$totalmrp Rs",
+                    style: TextStyle(fontSize: 30.0),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 100.0,
+              )
+            ],
+          ),
+        ),
+      ),
+      bottomSheet: Container(
+        height: 100.0,
+        width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(
+          color: Theme.of(context).primaryColor,
+        ),
+        child: Center(
+          child: FlatButton(
+            onPressed: () {},
+            child: Text(
+              "Buy Now",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold),
             ),
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
